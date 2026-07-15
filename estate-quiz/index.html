@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="en-AU"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Estate Organiser: one place for your family’s details</title>
-<meta name="description" content="A complete, fill-in-the-blanks workbook for your accounts, passwords, wishes and final instructions — so the people you love aren't left guessing. Built for Australian families. $79.">
+<title>The 2-Minute Estate Readiness Check</title>
+<meta name="description" content="How ready is your family if something happened tomorrow? Six quick questions, about two minutes. See where the gaps are and get a free toolkit to close them.">
 <style>
   :root{
     --navy:#1B2150; --cream:#F2EBDC; --gold:#C8A24B; --gold-d:#9a7a2e;
@@ -157,49 +157,42 @@
 .tm-card{flex:1 1 400px;max-width:460px;text-align:left;background:var(--navy);color:var(--cream);padding:24px 26px;border-radius:14px;box-shadow:0 14px 32px rgba(27,33,80,.22)}
 .tm-mark{font-family:Georgia,serif;font-size:46px;line-height:.55;color:var(--gold)}
 .tm-q{font-style:italic;font-size:1.05rem;line-height:1.55;margin:8px 0 14px}
-.tm-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;font-weight:700;color:var(--gold)}</style><style>.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;text-align:left}.prod-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 22px;display:flex;flex-direction:column}.prod-card h4{font-size:1.15rem;margin:0 0 4px}.prod-price{font-family:var(--sans);font-weight:800;font-size:1.5rem;color:var(--navy);margin:2px 0 12px}.prod-price.free{color:var(--sage)}.prod-card p{color:#55524b;font-size:.96rem;flex:1}.prod-card .btn{width:100%;text-align:center;padding:12px 10px;font-size:.95rem;margin-top:14px}.prod-badge{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:700;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:8px;width:fit-content}.founder-row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center}.founder-row img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}@media(max-width:900px){.prod-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.prod-grid{grid-template-columns:1fr}}</style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2230204167748434');fbq('track','PageView');</script>
+.tm-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;font-weight:700;color:var(--gold)}
+  /* estate check quiz */
+  .erq-section{padding:64px 0 88px}
+  .erq-card{background:var(--cream);border-radius:18px;max-width:640px;margin:0 auto;padding:48px 46px;
+    box-shadow:0 30px 70px rgba(0,0,0,.32);border:1px solid rgba(200,162,75,.35);text-align:center;min-height:340px;
+    display:flex;flex-direction:column;justify-content:center}
+  .erq-h{font-family:var(--serif);color:var(--navy);font-size:2rem;line-height:1.22;margin-bottom:14px;font-weight:normal}
+  .erq-sub{color:#55524b;font-size:1.08rem;max-width:520px;margin:0 auto 22px;line-height:1.6}
+  .erq-btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:700;
+    border:none;cursor:pointer;padding:17px 40px;border-radius:6px;font-size:1.08rem;text-decoration:none;
+    box-shadow:0 8px 22px rgba(27,33,80,.20);transition:transform .15s,box-shadow .15s;margin-top:4px}
+  .erq-btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(27,33,80,.28)}
+  .erq-btn:disabled{opacity:.55;cursor:default;transform:none;box-shadow:none}
+  .erq-brand{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:.72rem;font-weight:700;color:var(--gold-d);margin-bottom:14px}
+  .erq-prog{height:6px;background:#e4dccb;border-radius:6px;overflow:hidden;margin:0 auto 28px;max-width:420px}
+  .erq-bar{height:100%;background:var(--gold);border-radius:6px;transition:width .35s ease}
+  .erq-q{font-family:var(--serif);color:var(--navy);font-size:1.5rem;line-height:1.35;margin:0 auto 28px;max-width:520px}
+  .erq-opt{display:block;width:100%;max-width:420px;margin:0 auto 12px;background:var(--white);border:1.5px solid var(--line);
+    color:var(--navy);font-family:var(--sans);font-weight:600;font-size:1.02rem;padding:15px 20px;border-radius:8px;cursor:pointer;
+    transition:border-color .15s,background .15s,transform .1s}
+  .erq-opt:hover{border-color:var(--gold);background:#fbf6ea;transform:translateY(-1px)}
+  .erq-score{font-family:var(--serif);font-size:4rem;color:var(--navy);line-height:1;margin:4px 0 2px}
+  .erq-gap{background:var(--white);border-left:3px solid var(--gold);text-align:left;padding:12px 16px;border-radius:6px;
+    margin:8px auto;max-width:470px;color:#3a3a42;font-size:.98rem}
+  .erq-in{display:block;width:100%;max-width:420px;margin:0 auto 12px;padding:14px 16px;border:1.5px solid var(--line);
+    border-radius:8px;font-size:1rem;font-family:var(--sans);color:var(--ink)}
+  .erq-in:focus{outline:none;border-color:var(--gold)}
+  .erq-disc{font-size:.78rem;color:#8a8578;margin-top:22px;line-height:1.55;max-width:480px;margin-left:auto;margin-right:auto}
+  @media(max-width:640px){.erq-card{padding:34px 22px;border-radius:14px}.erq-h{font-size:1.5rem}.erq-q{font-size:1.25rem}.erq-score{font-size:3rem}}
+</style><style>.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:40px;text-align:left}.prod-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 22px;display:flex;flex-direction:column}.prod-card h4{font-size:1.15rem;margin:0 0 4px}.prod-price{font-family:var(--sans);font-weight:800;font-size:1.5rem;color:var(--navy);margin:2px 0 12px}.prod-price.free{color:var(--sage)}.prod-card p{color:#55524b;font-size:.96rem;flex:1}.prod-card .btn{width:100%;text-align:center;padding:12px 10px;font-size:.95rem;margin-top:14px}.prod-badge{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:700;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:8px;width:fit-content}.founder-row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:center}.founder-row img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:3px solid var(--gold)}@media(max-width:900px){.prod-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.prod-grid{grid-template-columns:1fr}}</style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2230204167748434');fbq('track','PageView');</script>
 </head><body>
 <header><div class="hbar"><a href="/" class="brand">The Estate <b>Organiser</b><span class="ed-pill">🇦🇺 Australian Edition</span></a><a href="/toolkit/" class="btn">Get the free toolkit</a></div></header>
 <a id="top"></a>
-<section class="band-navy"><div class="wrap center">
-  <div class="eyebrow">For Australian families</div>
-  <h2 class="sec" style="color:var(--cream);font-size:2.7rem;margin-top:8px">How ready is your family if something happened tomorrow?</h2>
-  <p class="lead" style="color:#d9d3c4;max-width:660px;margin:14px auto 28px">Bank accounts. Passwords. Wishes. Super funds you forgot you had. One place, before it is needed.</p>
-  <a href="/estate-quiz/" class="btn btn-lg">Take the free 2-minute Estate Check</a>
-  <div style="margin-top:14px;font-size:.92rem;color:#b9b3a4">No cost. See your readiness score instantly.</div>
-  <div class="trust" style="justify-content:center;color:#b9b3a4;margin-top:20px"><span>Australian-made</span><span>&middot;</span><span>One-time purchase</span><span>&middot;</span><span>Lifetime updates</span></div>
+<section class="band-navy erq-section"><span id="erq-anchor" style="position:absolute;margin-top:-90px"></span><div class="wrap">
+  <div class="erq-card" id="erq-card"></div>
 </div></section>
-<section class="band"><div class="wrap center">
-  <h2 class="sec">Four ways to get your affairs in order</h2>
-  <p style="color:#6f6a5c;margin-top:2px">Start free, or go straight to the tool you need.</p>
-  <div class="prod-grid">
-    <div class="prod-card"><h4>Executor Toolkit</h4><div class="prod-price free">Free</div><p>A Day 1 to Month 12 roadmap, the common mistakes to avoid, notification letters and a tracker.</p><a class="btn" href="/toolkit/">Get the free toolkit</a></div>
-    <div class="prod-card"><span class="prod-badge">Start here &middot; $27</span><h4>Conversation Kit</h4><div class="prod-price">$27</div><p>The 7 conversations to have with the people you love, before you need them.</p><a class="btn" href="/the-estate-conversation-kit/">Start the conversations</a></div>
-    <div class="prod-card"><h4>Estate Organiser</h4><div class="prod-price">$79</div><p>The complete place to record what your executor needs. Accounts, wishes, contacts.</p><a class="btn" href="/the-estate-organiser/">Get the organiser</a></div>
-    <div class="prod-card"><h4>Guided Course</h4><div class="prod-price">$197</div><p>Walk through the organiser with me, chapter by chapter, so nothing is missed.</p><a class="btn" href="/the-estate-organiser-au-course/">Join the course</a></div>
-  </div>
-</div></section>
-<section class="band" style="background:#efe7d5"><div class="wrap"><div class="founder-row">
-  <img src="/assets/will.jpg" alt="Will, founder of The Estate Organiser">
-  <div style="max-width:560px"><h3 style="margin:0 0 8px">Hi, I&rsquo;m Will.</h3>
-  <p style="color:#55524b;margin:0">I am not a lawyer or a financial planner. I watched two families try to sort out an estate and saw how hard it is when nothing is written down. So I built what I wished they had: one place, plain language, no jargon, done quietly before it is needed.</p></div>
-</div></div></section>
-<section class="band-navy"><div class="wrap center">
-  <h2 class="sec" style="color:var(--cream)">Prefer to start with the free toolkit?</h2>
-  <p class="lead" style="color:#d9d3c4;max-width:600px;margin:10px auto 24px">A Day 1 to Month 12 roadmap, the common costly mistakes, notification letters and an expense tracker. Free and instant.</p>
-  <a href="/toolkit/" class="btn btn-lg">Send me the toolkit</a>
-  <p class="disc" style="color:#8f8a7c;margin-top:22px;max-width:640px;margin-left:auto;margin-right:auto">Educational content only. Not legal, financial or tax advice. Estate laws vary across Australian states and territories. Always consult a qualified professional.</p>
-</div></section>
-<section class="band">
-  <div class="wrap center">
-    <div class="eyebrow">What readers are saying</div>
-    <h2 class="sec">Early readers, in their own words.</h2>
-    <hr class="rule">
-    <div class="tm-row"><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">It has exceeded my expectations by a country mile. Such a beautifully written document is priceless.</p><div class="tm-name">Merryl</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">I really like the explanation at the beginning of each section, outlining what it is about and why. It sets the tone and purpose.</p><div class="tm-name">Nicola, Mona Vale, 55</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">There are things in it I would never have thought of. It is extremely detailed.</p><div class="tm-name">Wendy</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A very comprehensive document. I particularly like the explanations as to why a particular action is important.</p><div class="tm-name">Joe</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">So thoughtfully written. I believe it could really help a lot of people.</p><div class="tm-name">Christina</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A comprehensive, thorough, and professional book. I am looking forward to filling it out.</p><div class="tm-name">Louise</div></div></div>
-    <a href="https://www.facebook.com/theestateorganiser/reviews" target="_blank" rel="noopener"><img class="tm-fb" src="assets/fb-review.png" alt="A reader's review of The Estate Organiser on Facebook"></a>
-    <p class="tm-fbcap">Straight from our Facebook page. Tap to see the review live.</p>
-  </div>
-</section>
 <footer>
   <div class="wrap">
     <div class="fbar">
@@ -217,4 +210,63 @@
     <p class="disc">The Estate Organiser is an information-gathering and record-keeping tool. It is not legal, financial or tax advice, and it is not a Will, Power of Attorney, or any other legal document. Estate rules vary across Australian states and territories and change over time; consult a qualified solicitor, accountant or financial adviser for advice specific to your circumstances.<br><br>© 2026 Prestige Worldwright Pty Ltd. All rights reserved.</p>
   </div>
 </footer>
+<script>
+(function(){
+  var RELAY="https://eo-capture-relay-production.up.railway.app/capture";
+  var MARKET="au";
+  var TOOLKIT="/toolkit/Executor-Toolkit-The-Estate-Organiser.pdf";
+  var DISC="Educational content only. Not legal, financial or tax advice. Estate laws vary across Australian states and territories. Always consult a qualified professional about your specific situation.";
+  var Q=[
+    {q:"Could your family quickly find your will if they needed it tomorrow?",gap:"Where your will is kept"},
+    {q:"Is there one place your family could find all your bank accounts, super and insurance?",gap:"A single place that lists your accounts, super and insurance"},
+    {q:"Have you checked your super death benefit nomination in the last few years, and is it current?",gap:"Your super death benefit nomination"},
+    {q:"Have you set up safe access to your important online accounts and photos (a password manager, or the legacy settings on your phone)?",gap:"Safe access to your digital accounts and photos"},
+    {q:"Have you talked with your family about what you would want?",gap:"The conversation with your family"},
+    {q:"Is there someone able to act for you if you could not manage your own affairs (a power of attorney)?",gap:"A power of attorney, for if you could not act yourself"}
+  ];
+  var ans=[];
+  var card=document.getElementById("erq-card");
+  function up(){ try{ document.getElementById("erq-anchor").scrollIntoView({behavior:"smooth",block:"start"}); }catch(e){ window.scrollTo(0,0); } }
+  function intro(){
+    card.innerHTML='<div class="erq-brand">The 2-minute Estate Check</div><h1 class="erq-h">How ready is your family if something happened tomorrow?</h1><p class="erq-sub">Six quick questions, about two minutes. No right or wrong answers, just an honest picture of where things stand. At the end you can grab a free toolkit to close any gaps.</p><button class="erq-btn" id="erq-start">Start the 2-minute check</button><div class="erq-disc">'+DISC+'</div>';
+    document.getElementById("erq-start").onclick=function(){question(0);up();};
+  }
+  function question(i){
+    var q=Q[i];var pct=Math.round((i/Q.length)*100);
+    card.innerHTML='<div class="erq-brand">Question '+(i+1)+' of '+Q.length+'</div><div class="erq-prog"><div class="erq-bar" style="width:'+pct+'%"></div></div><div class="erq-q">'+q.q+'</div><button class="erq-opt" data-v="2">Yes</button><button class="erq-opt" data-v="1">Not sure</button><button class="erq-opt" data-v="0">No, or not yet</button>';
+    var opts=card.querySelectorAll(".erq-opt");
+    for(var k=0;k<opts.length;k++){opts[k].onclick=function(){ans[i]=parseInt(this.getAttribute("data-v"),10);if(i+1<Q.length){question(i+1);}else{results();}up();};}
+  }
+  function results(){
+    var score=0;for(var s=0;s<ans.length;s++){score+=ans[s];}
+    var gaps=[];for(var i=0;i<Q.length;i++){if(ans[i]<2)gaps.push(Q[i].gap);}
+    var msg;if(score>=9){msg="You are more organised than many families. There may still be a gap or two worth closing.";}else if(score>=5){msg="A solid start, with some important gaps still to close.";}else{msg="Like a lot of families, there is real work to do here. The good news: that is exactly what the free toolkit is for.";}
+    var gh="";if(gaps.length){gh='<p class="erq-sub" style="margin-bottom:10px"><strong>Worth a look:</strong></p>';for(var g=0;g<gaps.length;g++){gh+='<div class="erq-gap">'+gaps[g]+'</div>';}}
+    card.innerHTML='<div class="erq-brand">Your result</div><div class="erq-score">'+score+'<span style="font-size:1.4rem;color:#9a9a9a">/12</span></div><p class="erq-sub" style="margin-top:6px">'+msg+'</p>'+gh+'<h2 class="erq-h" style="font-size:1.5rem;margin-top:28px">Get the free Executor Toolkit to close the gaps</h2><p class="erq-sub">A step-by-step roadmap for getting organised, with notification letters and a simple tracker. We will email it to you along with your results.</p><input class="erq-in" id="erq-name" type="text" placeholder="First name" autocomplete="given-name"><input class="erq-in" id="erq-email" type="email" placeholder="Email address" autocomplete="email" inputmode="email"><button class="erq-btn" id="erq-submit">Send me the free Toolkit</button><div id="erq-err" style="color:#b23;font-size:14px;margin-top:10px;display:none"></div><div class="erq-disc">'+DISC+'</div>';
+    document.getElementById("erq-submit").onclick=submit;
+    document.getElementById("erq-email").addEventListener("keydown",function(e){if(e.key==="Enter")submit();});
+    up();
+  }
+  var sent=false;
+  function submit(){
+    var email=(document.getElementById("erq-email").value||"").trim();
+    var name=(document.getElementById("erq-name").value||"").trim();
+    var err=document.getElementById("erq-err");
+    if(!name){document.getElementById("erq-name").focus();return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="Please enter a valid email address.";err.style.display="block";return;}
+    var btn=document.getElementById("erq-submit");btn.textContent="Sending...";btn.disabled=true;
+    var to=setTimeout(done,5000);
+    fetch(RELAY,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({market:MARKET,name:name,email:email})})
+      .then(function(r){return r.json();}).then(function(){clearTimeout(to);done();})
+      .catch(function(){clearTimeout(to);done();});
+  }
+  function done(){
+    if(sent)return;sent=true;try{fbq("track","Lead");}catch(e){}
+    card.innerHTML='<div class="erq-brand">All set</div><h2 class="erq-h" style="font-size:1.7rem">Your Executor Toolkit is on its way</h2><p class="erq-sub">We have emailed it to you along with your results. You can also download it right now.</p><a class="erq-btn" href="'+TOOLKIT+'" download>Download the free Toolkit</a><div class="erq-disc">'+DISC+'</div>';
+    up();
+  }
+  intro();
+})();
+</script>
+
 </body></html>
