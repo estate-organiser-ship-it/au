@@ -104,12 +104,12 @@
     section{padding:56px 0}.hbar .brand{font-size:1rem}
   }
 </style>
-</head>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2230204167748434');fbq('track','PageView');</script></head>
 <body id="top">
   <header>
     <div class="hbar">
       <a href="#top" class="brand">The Estate <b>Organiser</b><span class="ed-pill">🇦🇺 Australian Edition</span></a>
-      <a href="#top" class="btn">Get the free toolkit</a>
+      <a href="#top" class="btn">Get the free checklist</a>
     </div>
   </header>
 
@@ -122,13 +122,13 @@
         <form id="optin" class="optin-form" action="#" method="POST" novalidate>
           <input type="text" name="form_submission[name]" placeholder="Your first name" autocomplete="given-name">
           <input type="email" name="form_submission[email]" placeholder="Your email address" autocomplete="email">
-          <button type="submit" class="btn btn-lg">Send me the free toolkit</button>
+          <button type="submit" class="btn btn-lg">Send me the free checklist</button>
         </form>
         <p class="micro" id="privline">We respect your privacy. Unsubscribe anytime.</p>
         <div class="done" id="done">
           <h3>Your First 48 Hours Checklist is ready</h3>
           <p>Click below to download your copy. I have also sent it to your email, so it is there when you need it.</p>
-          <a class="btn btn-lg" id="dl" href="#" download>Download the toolkit (PDF)</a>
+          <a class="btn btn-lg" id="dl" href="#" download>Download the checklist (PDF)</a>
         </div>
         <div class="trust">
           <span><span class="dot"></span>Instant download</span>
@@ -198,7 +198,7 @@
       <form id="optin2" class="optin-form" action="#" method="POST" novalidate>
         <input type="text" name="form_submission[name]" placeholder="Your first name" autocomplete="given-name">
         <input type="email" name="form_submission[email]" placeholder="Your email address" autocomplete="email">
-        <button type="submit" class="btn btn-lg">Send me the free toolkit</button>
+        <button type="submit" class="btn btn-lg">Send me the free checklist</button>
       </form>
       <p class="micro">General information only. Not legal, financial or tax advice.</p>
     </div>
@@ -212,7 +212,7 @@
           <div style="margin-top:6px">What your family will need, in one place.</div>
         </div>
         <div>
-          <a href="#top">Get the free toolkit</a>
+          <a href="#top">Get the free checklist</a>
           <a href="https://www.theestateorganiser.com.au/privacy-policy">Privacy</a>
           <a href="https://www.theestateorganiser.com.au/terms-of-service">Terms</a>
         </div>
@@ -223,12 +223,12 @@
 
 
 <script>
-  var PDF_URL="Executor-Toolkit-The-Estate-Organiser.pdf";
+  var PDF_URL="Executor-Checklist-The-Estate-Organiser.pdf";
   var RELAY="https://eo-capture-relay-production.up.railway.app/capture";
   var MARKET="au48";
   var delivered=false;
   function showDone(){
-    if(delivered)return; delivered=true;
+    if(delivered)return; delivered=true; try{fbq('track','Lead');}catch(e){}
     var dl=document.getElementById('dl'); if(dl) dl.href=PDF_URL;
     document.querySelectorAll('.optin-form').forEach(function(f){f.style.display='none';});
     var pl=document.getElementById('privline'); if(pl) pl.style.display='none';
