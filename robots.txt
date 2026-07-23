@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.theestateorganiser.au/sitemap.xml
+Sitemap: https://www.theestateorganiser.com.au/sitemap.xml
