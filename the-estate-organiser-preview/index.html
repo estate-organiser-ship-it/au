@@ -98,7 +98,11 @@
   .band-navy .split p{color:#d2cdbe}
 
   /* formats */
-  .formats{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:42px}
+  .formats{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:42px;max-width:860px;margin-left:auto;margin-right:auto}
+  .formats .fmt-wide{grid-column:1/-1;max-width:calc(50% - 13px);margin:0 auto;width:100%}
+  a.fmt{display:block;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+  a.fmt:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(27,33,80,.14)}
+  .fmt .go{display:inline-block;margin-top:14px;color:var(--gold-d);font-weight:700;font-size:.95rem}
   .fmt{text-align:center;padding:30px 22px;border:1px solid var(--line);border-radius:12px;background:#fbf8f1}
   .fmt .tag{font-family:var(--sans);font-weight:800;color:var(--gold-d);font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase}
   .fmt h4{font-size:1.22rem;margin:8px 0 8px}
@@ -299,9 +303,9 @@
   </div>
   <div class="wrap">
     <div class="formats">
-      <div class="fmt"><div class="tag">Type it</div><h4>Digital, fillable PDF</h4><p>Type straight into it on your computer and save. Update it whenever life changes. Thousands of fillable fields.</p></div>
-      <div class="fmt"><div class="tag">Write it</div><h4>Print edition</h4><p>An ink-light version designed to print at home and fill in by hand, if that's more your style.</p></div>
-      <div class="fmt"><div class="tag">Just what you need</div><h4>Individual chapters</h4><p>Each section as its own file, so you can print only the parts that apply to you.</p></div>
+      <a class="fmt" href="https://checkout.theestateorganiser.au/c5623d53"><div class="tag">Type it</div><h4>Digital, fillable PDF</h4><p>Type straight into it on your computer and save. Update it whenever life changes. Thousands of fillable fields.</p><span class="go">Choose the digital edition, $79</span></a>
+      <a class="fmt" href="https://checkout.theestateorganiser.au/printed-book-only"><div class="tag">Write it</div><h4>The printed book</h4><p>The real coil bound book, posted to your door. Fill it in with a pen at the kitchen table.</p><span class="go">Choose the printed book, $139</span></a>
+      <a class="fmt fmt-wide" href="https://checkout.theestateorganiser.au/c5623d53"><div class="tag">Just what you need</div><h4>Individual chapters</h4><p>Each section as its own file, so you can print only the parts that apply to you. Included with every digital edition.</p><span class="go">Comes with the digital edition</span></a>
     </div>
   </div>
 </section>
@@ -390,6 +394,7 @@
         <div class="t-sub">Free shipping in Australia</div>
         <p>The coil bound book, printed just for you and posted to your door. Fill it in with a pen, keep it in a drawer.</p>
         <a class="btn ghost" href="https://checkout.theestateorganiser.au/printed-book-only">Get the Printed Edition</a>
+        <div class="micro" style="margin-top:10px">Add a second copy at checkout, A$99</div>
       </div>
       <div class="tier featured">
         <span class="tier-badge">Most popular</span>
@@ -398,14 +403,14 @@
         <div class="t-sub">Free shipping, digital copy instantly</div>
         <p>The printed book posted to you, plus the digital edition in your inbox tonight. Start straight away, write it up properly when the book arrives.</p>
         <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Get Printed + Digital</a>
+        <div class="micro" style="margin-top:10px">Add a second copy at checkout, A$99</div>
       </div>
     </div>
-    <div class="order-notes">
-      <div class="on-card"><h4>Want two copies?</h4><p>Tick the second-copy box at checkout. A$99 for the second book, saving A$50. Most families keep one and give one to the executor.</p></div>
-      <div class="on-card"><h4>Sending it as a gift?</h4><p>We post it straight to them, with your personal message included.</p><p style="margin-top:10px"><a href="https://checkout.theestateorganiser.au/gift-a-printed-book">Gift the printed book, A$119</a></p></div>
-      <div class="on-card"><h4>When does it arrive?</h4><p>Each book is printed just for you, so allow up to two weeks anywhere in Australia. The digital edition arrives instantly.</p></div>
+    <div style="text-align:center;margin-top:34px">
+      <p style="color:#3d4149;font-size:1.02rem">Sending it as a gift? We post it straight to them, with your personal message included. <a href="https://checkout.theestateorganiser.au/gift-a-printed-book" style="color:var(--gold-d);font-weight:700">Gift the printed book, A$119</a></p>
+      <p class="micro" style="margin-top:10px">Each book is printed just for you: allow up to two weeks anywhere in Australia. The digital edition always arrives instantly.</p>
     </div>
-  </div>
+</div>
 </section>
 <section class="band">
   <div class="wrap">
