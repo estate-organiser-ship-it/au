@@ -337,7 +337,7 @@
       <span style="display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:700;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:12px">Make it a set</span>
       <h3 style="color:var(--navy);font-size:1.35rem;margin:0 0 10px">Add the Conversation Kit, so the talks happen too.</h3>
       <p style="color:#55524b;font-size:1rem;margin:0 0 12px">The book covers the paperwork. The Estate Conversation Kit covers the talks, seven short guided conversations for the things families put off, like where the Will is and who does what.</p>
-      <p style="color:#55524b;font-size:1rem;margin:0">Give them together and you're not just handing over a book. You're opening the conversation. Tick the Conversation Kit box on the order page to get both for $98.</p>
+      <p style="color:#55524b;font-size:1rem;margin:0">Give them together and you hand over more than a book. You open the conversation. Tick the Conversation Kit box at checkout to add it for $19.</p>
       <div style="margin-top:18px"><a href="/the-estate-conversation-kit/" style="color:var(--gold-d);font-weight:700;text-decoration:underline">See what's in the Conversation Kit</a></div>
     </div>
   </div>
@@ -365,10 +365,12 @@
   .tier p{color:#55524b;font-size:.98rem;margin:12px 0 22px;flex:1}
   .tier .btn{width:100%;padding:15px 10px;font-size:.98rem}
   .tier .btn.ghost{background:transparent;border:1.5px solid var(--gold);box-shadow:none}
-  .order-notes{max-width:720px;margin:38px auto 0;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px 30px}
-  .order-notes p{padding:8px 0;color:#3d4149;border-bottom:1px solid var(--line);font-size:1rem}
-  .order-notes p:last-child{border-bottom:none}
-  .order-notes b{color:var(--navy)}
+  .order-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1000px;margin:38px auto 0}
+  .order-notes .on-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+  .order-notes h4{font-size:1.12rem;margin-bottom:10px}
+  .order-notes p{color:#3d4149;font-size:1.02rem;line-height:1.6}
+  .order-notes a{color:var(--gold-d);font-weight:700}
+  @media(max-width:880px){.order-notes{grid-template-columns:1fr}}
   @media(max-width:880px){.tiers{grid-template-columns:1fr}}
 </style>
 <section id="choose-format">
@@ -399,9 +401,9 @@
       </div>
     </div>
     <div class="order-notes">
-      <p><b>Ordering two printed copies?</b> Add a second at checkout for A$99 and save A$50. Most families keep one and give one to the executor.</p>
-      <p><b>Sending it as a gift?</b> We post it straight to them with your message included. <a href="https://checkout.theestateorganiser.au/gift-a-printed-book">Gift the printed book, A$119</a></p>
-      <p><b>Printed books take up to two weeks</b>, printed one at a time in Australia. The digital edition always arrives instantly.</p>
+      <div class="on-card"><h4>Want two copies?</h4><p>Tick the second-copy box at checkout. A$99 for the second book, saving A$50. Most families keep one and give one to the executor.</p></div>
+      <div class="on-card"><h4>Sending it as a gift?</h4><p>We post it straight to them, with your personal message included.</p><p style="margin-top:10px"><a href="https://checkout.theestateorganiser.au/gift-a-printed-book">Gift the printed book, A$119</a></p></div>
+      <div class="on-card"><h4>When does it arrive?</h4><p>Each book is printed just for you, so allow up to two weeks anywhere in Australia. The digital edition arrives instantly.</p></div>
     </div>
   </div>
 </section>
