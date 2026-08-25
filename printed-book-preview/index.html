@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>The Printed Estate Organiser</title>
+<link rel="icon" href="/favicon.ico">
+<meta name="description" content="The Estate Organiser, printed and bound. Every account, policy and wish recorded in your own handwriting, in one book your family can actually find. A$149, shipped free in Australia.">
+<style>
+  :root{
+    --navy:#1B2150; --cream:#F2EBDC; --gold:#C8A24B; --gold-d:#9a7a2e;
+    --sage:#7C8A6A; --ink:#2c3038; --line:#e4dccb; --white:#fff;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);line-height:1.65;background:var(--cream);-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);line-height:1.18;font-weight:normal}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .small{max-width:760px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:700;
+    text-decoration:none;padding:18px 38px;border-radius:6px;font-size:1.06rem;letter-spacing:.2px;
+    box-shadow:0 6px 20px rgba(27,33,80,.18);transition:transform .15s,box-shadow .15s;border:none;cursor:pointer}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(27,33,80,.26)}
+  .btn-lg{padding:20px 46px;font-size:1.15rem}
+  .micro{font-size:.86rem;color:var(--sage);letter-spacing:.3px}
+  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:.74rem;font-weight:700;color:var(--gold-d)}
+  .rule{width:54px;height:3px;background:var(--gold);border:0;margin:14px 0 26px}
+  .center{text-align:center}.center .rule{margin-left:auto;margin-right:auto}
+  .sub{font-size:1.12rem;color:#55524b;max-width:680px;margin:0 auto}
+
+  header{position:sticky;top:0;z-index:30;background:rgba(27,33,80,.97);backdrop-filter:blur(6px);border-bottom:1px solid rgba(200,162,75,.35)}
+  .hbar{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1080px;margin:0 auto}
+  .brand{font-family:var(--serif);color:var(--cream);font-size:1.18rem;letter-spacing:.4px;text-decoration:none}
+  .brand b{color:var(--gold);font-weight:normal}
+  .ed-pill{display:inline-block;background:var(--gold);color:var(--navy);font-family:var(--sans);font-weight:800;font-size:.62rem;letter-spacing:.6px;text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-left:9px;vertical-align:middle;white-space:nowrap}
+  @media(max-width:640px){.ed-pill{display:none}}
+  .hbar .btn{padding:11px 22px;font-size:.92rem;box-shadow:none}
+
+  .hero{background:var(--cream);color:var(--ink);padding:70px 0 80px;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+  .hero h1{color:var(--navy);font-size:2.85rem;margin-bottom:18px}
+  .hero p.lead{font-size:1.22rem;color:#55524b;margin-bottom:26px;max-width:540px}
+  .hero .price-line{font-family:var(--serif);color:var(--navy);font-size:1.25rem;margin-bottom:26px}
+  .cover-shot{position:relative;text-align:center}
+  .cover-shot img{width:84%;max-width:360px;border-radius:6px;box-shadow:0 26px 60px rgba(0,0,0,.45);border:1px solid rgba(200,162,75,.4)}
+  .flag{position:absolute;top:-22px;right:12px;background:var(--gold);color:var(--navy);font-weight:800;font-size:1.05rem;letter-spacing:.5px;padding:12px 24px;border-radius:30px;font-family:var(--sans);box-shadow:0 10px 24px rgba(0,0,0,.32);z-index:2}
+
+  section{padding:78px 0}
+  .band{background:var(--white)}
+  h2.sec{font-size:2.15rem;margin-bottom:6px}
+  .problem{background:var(--navy);color:var(--cream);text-align:center;padding:66px 0}
+  .problem h2{color:#fff;font-size:2.1rem;max-width:800px;margin:0 auto 16px}
+  .problem p{color:#cfc9ba;font-size:1.12rem;max-width:680px;margin:0 auto 14px}
+
+  .what-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;margin-top:36px}
+  .what-grid ul{list-style:none}
+  .what-grid li{padding:12px 0 12px 34px;position:relative;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  .what-grid li:last-child{border-bottom:none}
+  .what-grid li::before{content:"✓";position:absolute;left:2px;top:12px;color:var(--gold-d);font-weight:700}
+  .spread-shots{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .spread-shots figure{background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:12px;text-align:center}
+  .spread-shots img{width:100%;border-radius:6px;box-shadow:0 8px 22px rgba(27,33,80,.14)}
+  .spread-shots figcaption{font-size:.85rem;color:#6f6a5c;margin-top:8px}
+
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;align-items:stretch}
+  .tier{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:34px 28px;text-align:center;display:flex;flex-direction:column;position:relative}
+  .tier.featured{border:2px solid var(--gold);box-shadow:0 16px 40px rgba(27,33,80,.14)}
+  .tier-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-weight:800;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;white-space:nowrap}
+  .tier h3{font-size:1.3rem;margin-bottom:6px}
+  .tier .t-price{font-family:var(--serif);color:var(--navy);font-size:2.1rem;margin:10px 0 4px}
+  .tier .t-price span{font-size:.95rem;color:var(--sage);font-family:var(--sans);font-weight:600}
+  .tier p{color:#55524b;font-size:.98rem;margin:12px 0 22px;flex:1}
+  .tier .btn{width:100%;padding:15px 10px;font-size:.98rem}
+  .tier .btn.ghost{background:transparent;border:1.5px solid var(--gold);box-shadow:none}
+  .order-notes{max-width:720px;margin:38px auto 0;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:26px 30px}
+  .order-notes p{padding:8px 0;color:#3d4149;border-bottom:1px solid var(--line);font-size:1rem}
+  .order-notes p:last-child{border-bottom:none}
+  .order-notes b{color:var(--navy)}
+
+  .tm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:42px}
+  .tm-card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:30px 26px;text-align:left}
+  .tm-mark{font-family:var(--serif);color:var(--gold);font-size:2.6rem;line-height:1;margin-bottom:8px}
+  .tm-q{font-family:var(--serif);color:var(--navy);font-size:1.08rem;line-height:1.5;margin-bottom:16px}
+  .tm-name{font-size:.92rem;color:var(--sage);font-weight:600}
+
+  .faq-list{max-width:760px;margin:40px auto 0}
+  .faq-list details{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:14px}
+  .faq-list summary{font-family:var(--serif);color:var(--navy);font-size:1.12rem;cursor:pointer}
+  .faq-list p{color:#55524b;margin-top:12px}
+
+  .final{background:var(--navy);text-align:center;padding:80px 0}
+  .final h2{color:#fff;font-size:2.1rem;margin-bottom:14px}
+  .final p{color:#cfc9ba;font-size:1.12rem;margin-bottom:30px}
+
+  footer{background:var(--navy);border-top:1px solid rgba(200,162,75,.25);padding:34px 0;text-align:center}
+  footer p{color:#a6a1b8;font-size:.85rem;max-width:720px;margin:0 auto 8px}
+  footer a{color:#cfc9ba}
+
+  @media(max-width:880px){
+    .hero-grid,.what-grid{grid-template-columns:1fr}
+    .tiers,.tm-grid{grid-template-columns:1fr}
+    .hero h1{font-size:2.2rem}
+    .cover-shot{order:-1}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <a class="brand" href="/">The <b>Estate Organiser</b><span class="ed-pill">🇦🇺 Australian Edition</span></a>
+    <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Get the printed book</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🇦🇺 The printed edition</span>
+      <h1>The book your family will reach for on their hardest day</h1>
+      <p class="lead">Every account, policy, password hint and wish, recorded in your own handwriting, in one printed book that lives in a drawer. Not in an app. Not in the cloud. Somewhere your family can actually find it.</p>
+      <p class="price-line">A$149, printed and shipped free anywhere in Australia.<br><span class="micro" style="font-size:.95rem">Your fillable digital edition is included and delivered instantly.</span></p>
+      <a class="btn btn-lg" href="https://checkout.theestateorganiser.au/printed-book-order">Get The Printed Estate Organiser</a>
+    </div>
+    <div class="cover-shot">
+      <span class="flag">A$149</span>
+      <img src="/assets/printed-book-mockup.png" alt="The Estate Organiser, printed and coil bound">
+      <p class="micro" style="margin-top:14px">Cover shown on the printed edition. Interior pages print in crisp black and white.</p>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap">
+    <h2>When someone dies, the person left behind has to become a detective.</h2>
+    <p>Which bank? Which super fund? Was there insurance? Where is the will kept? The average Australian estate involves dozens of accounts, policies and logins, and most families discover them one painful phone call at a time.</p>
+    <p>Solicitors charge thousands to untangle what could have been written down in an afternoon.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">What it is</span>
+      <h2 class="sec">A 394 page guided workbook</h2>
+      <hr class="rule">
+      <p class="sub">47 sections walk you through everything your family would need to know, one simple page at a time.</p>
+    </div>
+    <div class="what-grid">
+      <ul>
+        <li>Coil bound so it lies flat while you write</li>
+        <li>A &lsquo;not for me&rsquo; tick on every section, so you skip what does not apply and your family knows you skipped it on purpose</li>
+        <li>Room for 5 bank accounts, 5 investment accounts, 5 insurance policies, 3 properties and 4 vehicles, plus an extra ruled page in every section for anything that overflows</li>
+        <li>Written by hand at your own table. Nothing lives online for anyone to breach.</li>
+      </ul>
+      <div class="spread-shots">
+        <figure><img src="/assets/look-inside-bw/01-bank-accounts.jpg" alt="Bank accounts section, as it prints"><figcaption>Bank accounts</figcaption></figure>
+        <figure><img src="/assets/look-inside-bw/03-funeral-wishes.jpg" alt="Funeral wishes section, as it prints"><figcaption>Funeral wishes</figcaption></figure>
+        <figure><img src="/assets/look-inside-bw/02-digital-passwords.jpg" alt="Passwords and digital accounts section"><figcaption>Passwords &amp; digital</figcaption></figure>
+        <figure><img src="/assets/look-inside-bw/04-superannuation.jpg" alt="Superannuation section, as it prints"><figcaption>Superannuation</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Ordering options</span>
+      <h2 class="sec">Choose how you want yours</h2>
+      <hr class="rule">
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h3>Digital Edition</h3>
+        <div class="t-price">$79 <span>AUD</span></div>
+        <p>The complete fillable Organiser on your computer. Instant delivery, print sections yourself at home.</p>
+        <a class="btn ghost" href="/the-estate-organiser/">See the digital edition</a>
+      </div>
+      <div class="tier">
+        <h3>Printed Book Only</h3>
+        <div class="t-price">$139 <span>AUD</span></div>
+        <p>The printed, coil bound book, shipped free anywhere in Australia. Printed just for you.</p>
+        <a class="btn ghost" href="https://checkout.theestateorganiser.au/printed-book-only">Get the printed book</a>
+      </div>
+      <div class="tier featured">
+        <span class="tier-badge">Most popular</span>
+        <h3>Complete Edition</h3>
+        <div class="t-price">$149 <span>AUD</span></div>
+        <p>The printed book, shipped free, plus the fillable digital edition delivered to your inbox instantly. Start tonight, write it up properly when the book arrives.</p>
+        <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Get the Complete Edition</a>
+      </div>
+    </div>
+    <div class="order-notes">
+      <p><b>Ordering two?</b> Add a second copy at checkout for A$99 and save A$50. Most families order two: one to fill in, one for the executor.</p>
+      <p><b>Sending it as a gift?</b> We ship directly to them with your personal message included. <a href="https://checkout.theestateorganiser.au/gift-a-printed-book">Gift a printed book (A$119)</a></p>
+      <p><b>Need three or more?</b> Reply to your order receipt and we will sort it out.</p>
+      <p><b>Our replacement promise.</b> If your book arrives damaged or misprinted, we replace it free. The digital edition carries our 30 day money back guarantee.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">From our early readers</span>
+      <h2 class="sec">What families are telling us</h2>
+      <hr class="rule">
+    </div>
+    <div class="tm-grid">
+      <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">It has exceeded my expectations by a country mile. Such a beautifully written document is priceless.</p><div class="tm-name">Merryl</div></div>
+      <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A very comprehensive document. I particularly like the explanations as to why a particular action is important.</p><div class="tm-name">Joe, Torquay VIC, 83</div></div>
+      <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">So thoughtfully written. I believe it could really help a lot of people.</p><div class="tm-name">Christina, Gosford NSW, 45</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Questions</span>
+      <h2 class="sec">Before you order</h2>
+      <hr class="rule">
+    </div>
+    <div class="faq-list">
+      <details><summary>How long does delivery take?</summary><p>Each book is printed just for you. Allow up to two weeks anywhere in Australia. Your digital edition arrives instantly.</p></details>
+      <details><summary>Is this a will?</summary><p>No. It sits alongside your will and covers everything a will does not: where things are, who to call, what you would have wanted.</p></details>
+      <details><summary>Do I need to be good with computers?</summary><p>No. It is a paper book and a pen. That is the point.</p></details>
+      <details><summary>What if it is not right for me?</summary><p>The digital edition carries our 30 day money back guarantee, so you can read every section while your printed copy is on its way. And if your printed book ever arrives damaged or misprinted, we replace it free.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>One afternoon of writing.<br>A lifetime of your family knowing where everything is.</h2>
+    <p>Printed and bound, shipped free anywhere in Australia.</p>
+    <a class="btn btn-lg" href="https://checkout.theestateorganiser.au/printed-book-order">Get The Printed Estate Organiser</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>The Estate Organiser is educational content only, and is not legal or financial advice. &copy; Prestige Worldwright Pty Ltd.</p>
+    <p><a href="/privacy-policy/">Privacy</a> &middot; <a href="/terms-of-service/">Terms</a> &middot; <a href="/refund-policy/">Refunds</a> &middot; <a href="/contact/">Contact</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
