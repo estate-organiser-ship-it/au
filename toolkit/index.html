@@ -212,14 +212,7 @@
       <div class="eyebrow">What readers are saying</div>
       <h2 class="sec">From people who have read The Estate Organiser</h2>
       <hr class="rule">
-      <div class="tm-row">
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">It has exceeded my expectations by a country mile. Such a beautifully written document is priceless.</p><div class="tm-name">Merryl</div></div>
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A very comprehensive document. I particularly like the explanations as to why a particular action is important.</p><div class="tm-name">Joe, Torquay VIC, 83</div></div>
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">It has started a conversation amongst family regarding estate planning and funeral wishes.</p><div class="tm-name">Wendy, Melbourne VIC, 68</div></div>
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">So thoughtfully written. I believe it could really help a lot of people.</p><div class="tm-name">Christina, Gosford NSW, 45</div></div>
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A comprehensive, thorough, and professional book. I am looking forward to filling it out.</p><div class="tm-name">Louise, Canberra ACT, 65</div></div>
-        <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">I used to work for lawyers, so Wills were a daily situation. I believe everyone with assets needs one.</p><div class="tm-name">Connie</div></div>
-      <div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">You've given me a way of putting those experiences into easy to navigate and understand instructions for my family. You've done the heavy lifting.</p><div class="tm-name">GE, Perth WA, 71</div></div></div>
+      <div class="tm-row"><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">All the information in my head right now will not be available to the unlucky sod who has to work out my estate. Your Executor Toolkit can be my way of helping them out.</p><div class="tm-name">Greg</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">I used to work for lawyers, so Wills were a daily situation. I believe everyone with assets needs one.</p><div class="tm-name">Connie</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">Practical, with very helpful tips at the beginning of each section. A comprehensive guide to a sensitive but important life issue.</p><div class="tm-name">Pam, Blue Mountains, 79</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">A very comprehensive document. I particularly like the explanations as to why a particular action is important.</p><div class="tm-name">Joe, Torquay VIC, 83</div></div><div class="tm-card"><div class="tm-mark">&ldquo;</div><p class="tm-q">You've given me a way of putting those experiences into easy to navigate and understand instructions for my family. You've done the heavy lifting.</p><div class="tm-name">GE, Perth WA, 71</div></div></div>
       <div style="margin-top:34px;text-align:center"><p style="font-family:Georgia,'Times New Roman',serif;color:#1B2150;font-size:1.4rem;margin-bottom:14px">Join them. Start yours today.</p><a class="btn" href="/the-estate-organiser/">Get your copy of the Organiser</a><p style="font-size:.86rem;color:#5D6B50;letter-spacing:.3px;margin-top:14px">Instant download. 30-day money-back guarantee.</p></div>
     </div>
   </section>
@@ -271,7 +264,34 @@
   var RELAY="https://eo-capture-relay-production.up.railway.app/capture";
   var MARKET="au";
   var delivered=false;
-  function showDone(){
+  function eoShowFail(){
+    var all=document.querySelectorAll('button'), btn=null;
+    for(var i=0;i<all.length;i++){ if(all[i].disabled){ btn=all[i]; break; } }
+    if(btn){
+      btn.disabled=false;
+      if(btn.dataset && btn.dataset.t){ btn.textContent=btn.dataset.t; }
+      else if(/one moment|sending/i.test(btn.textContent||'')){ btn.textContent='Try again'; }
+    }
+    var slot=document.getElementById('erq-err');
+    if(slot){
+      slot.textContent='That did not go through. Please check the email address and try again. If it still will not work, email hello@theestateorganiser.com.au and we will add you by hand.';
+      slot.style.display='block';
+      try{ slot.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){}
+      return;
+    }
+    var box=document.getElementById('eo-capture-error');
+    if(!box){
+      box=document.createElement('div'); box.id='eo-capture-error'; box.setAttribute('role','alert');
+      box.style.cssText='margin:14px 0;padding:14px 16px;border:1px solid #C8A24B;border-left:4px solid #C8A24B;border-radius:6px;background:#fff8e6;color:#2c3038;font-size:.98rem;line-height:1.55;max-width:560px;text-align:left';
+      box.innerHTML='<strong>That did not go through.</strong> Please check the email address and try again. If it still will not work, email <a href="mailto:hello@theestateorganiser.com.au" style="color:#1B2150">hello@theestateorganiser.com.au</a> and we will add you to the list by hand.';
+      var anchor=btn||document.querySelector('form');
+      if(anchor&&anchor.parentNode){ anchor.parentNode.insertBefore(box,anchor.nextSibling); }
+      else { document.body.appendChild(box); }
+    }
+    box.style.display='block';
+    try{ box.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){}
+  }
+  function showDone(){ var eb=document.getElementById('eo-capture-error'); if(eb) eb.style.display='none'; var es=document.getElementById('erq-err'); if(es) es.style.display='none';
     if(delivered)return; delivered=true; try{fbq('track','Lead');}catch(e){}try{gtag('event','generate_lead');}catch(e){}
     var dl=document.getElementById('dl'); if(dl) dl.href=PDF_URL;
     document.querySelectorAll('.optin-form').forEach(function(f){f.style.display='none';});
@@ -290,12 +310,12 @@
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ if(em){em.focus();} return; }
       var btn=frm.querySelector('button[type=submit]');
       if(btn){ btn.disabled=true; btn.dataset.t=btn.textContent; btn.textContent='One moment...'; }
-      var to=setTimeout(showDone, 5000); /* never block the reader if the network hiccups */
-      fetch(RELAY,{method:'POST',headers:{'Content-Type':'application/json'},
+      var eoCtl=('AbortController' in window)?new AbortController():null;
+      var to=setTimeout(function(){ if(eoCtl){ try{eoCtl.abort();}catch(e){} } },15000); /* never block the reader if the network hiccups */
+      fetch(RELAY,{signal:(eoCtl?eoCtl.signal:undefined),method:'POST',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({market:MARKET,name:name,email:email})})
-        .then(function(r){return r.json();})
-        .then(function(){ clearTimeout(to); showDone(); })
-        .catch(function(){ clearTimeout(to); showDone(); });
+        .then(function(r){ return r.text().then(function(t){ var b=null; try{ b=JSON.parse(t); }catch(e){} return { ok: r.ok && (!b || b.ok !== false) }; }); }).then(function(res){ clearTimeout(to); if(res.ok){ showDone(); } else { eoShowFail(); } })
+        .catch(function(){ clearTimeout(to); eoShowFail(); });
     });
   }
   wire('optin'); wire('optin2');
