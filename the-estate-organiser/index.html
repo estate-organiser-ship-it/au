@@ -182,6 +182,25 @@
 summary{padding:13px 0;min-height:44px;align-items:center}
 details{border-bottom:1px solid rgba(27,33,80,.12)}
 .tm-q{font-size:1.02rem;line-height:1.6}
+/* 30-day seal rebuilt: sub-label was .55rem (8.8px). Contrast was already 6.32:1 on navy,
+   so this is a size and hierarchy fix, not a colour one. Double ring reads as a stamp. */
+.guar .seal{
+  flex:0 0 128px;width:128px;height:128px;
+  border:2px solid var(--gold);
+  box-shadow:inset 0 0 0 6px var(--navy), inset 0 0 0 7px rgba(200,162,75,.5);
+  background:rgba(200,162,75,.06);
+  line-height:1;gap:5px;
+}
+.guar .seal b{font-size:3rem;font-weight:600;letter-spacing:-1.5px;color:var(--gold)}
+.guar .seal span{
+  font-family:var(--sans);font-size:.78rem;font-weight:600;
+  letter-spacing:3px;text-indent:3px;text-transform:uppercase;
+  color:var(--gold);padding:0;line-height:1;
+}
+@media (max-width:520px){
+  .guar .seal{flex:0 0 112px;width:112px;height:112px}
+  .guar .seal b{font-size:2.6rem}
+}
 @media (max-width:520px){
   .eyebrow{font-size:.8rem}
   .vs-them .amt{font-size:1.3rem}
@@ -309,7 +328,7 @@ details{border-bottom:1px solid rgba(27,33,80,.12)}
 <section class="band">
   <div class="wrap">
     <div class="guar">
-      <div class="seal"><b>30</b><span>day guarantee</span></div>
+      <div class="seal"><b>30</b><span>days</span></div>
       <div>
         <h3>Try it for 30 days, risk-free.</h3>
         <p>Get the Organiser and work through it. If it isn't right for you, email <a href="mailto:hello@theestateorganiser.com.au">hello@theestateorganiser.com.au</a> within 30 days for a full refund. No questions asked. The only risk is leaving your family to guess.</p>
