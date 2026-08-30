@@ -79,6 +79,7 @@
   .value .vs-us{background:var(--white)}
   .value .amt{font-family:var(--serif);font-size:2.4rem;color:var(--navy);margin:6px 0 4px}
   .value .vs-them .amt{color:#9a8f7c}
+  .amt-note{font-family:var(--sans);font-size:.82rem;color:#6B6355;opacity:.85;margin-bottom:8px}
   .value h4{font-size:1.05rem;margin-bottom:4px}
 
   /* features grid */
@@ -225,7 +226,8 @@
     <div class="value">
       <div class="vs-them">
         <h4>Hiring an estate solicitor</h4>
-        <div class="amt">$1,500–$3,000+</div>
+        <div class="amt">$1,500 to $3,000+</div>
+        <div class="amt-note">Typical range. Estimate only.</div>
         <p>Worth it for the legal documents. But a solicitor won't write down where your accounts and passwords live, or what you actually want. That part is on you.</p>
       </div>
       <div class="vs-us">
@@ -234,6 +236,10 @@
         <p>The place to put everything your solicitor's documents don't capture, so your executor isn't left playing detective. Start tonight, finish over a few weeks.</p>
       </div>
     </div>
+  </div>
+
+  <div class="wrap center" style="margin-top:18px">
+    <p style="max-width:640px;margin:14px auto 0;font-size:13px;line-height:1.5;opacity:.7">A full estate planning package from a solicitor is commonly quoted around $1,500 to $3,000+. Estimate for illustration only. Fees vary by state, by firm and by how complex your affairs are, so ask your own solicitor for a quote.</p>
   </div>
 
   <div class="wrap center" style="margin-top:30px">
@@ -449,7 +455,7 @@
   .tm-card{flex:1 1 400px;max-width:460px;text-align:left;background:var(--navy);color:var(--cream);padding:24px 26px;border-radius:14px;box-shadow:0 14px 32px rgba(27,33,80,.22)}
   .tm-mark{font-family:Georgia,serif;font-size:46px;line-height:.55;color:var(--gold)}
   .tm-q{font-style:italic;font-size:1.05rem;line-height:1.55;margin:8px 0 14px}
-  .tm-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;font-weight:700;color:var(--gold)}.tm-lead{max-width:700px;margin:0 auto 36px;text-align:center}.tm-lead-setup{font-family:var(--sans);font-size:.98rem;line-height:1.6;color:var(--ink);margin:0 0 16px}.tm-lead-q{font-family:var(--serif);font-style:italic;font-size:1.65rem;line-height:1.35;color:var(--navy);margin:0 0 12px}.tm-lead-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:.72rem;font-weight:700;color:var(--gold-d)}@media(max-width:600px){.tm-lead-q{font-size:1.3rem}}
+  .tm-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:0.9rem;font-weight:700;color:var(--gold)}.tm-lead{max-width:700px;margin:0 auto 36px;text-align:center}.tm-lead-setup{font-family:var(--sans);font-size:.98rem;line-height:1.6;color:var(--ink);margin:0 0 16px}.tm-lead-q{font-family:var(--serif);font-style:italic;font-size:1.65rem;line-height:1.35;color:var(--navy);margin:0 0 12px}.tm-lead-name{font-family:var(--sans);text-transform:uppercase;letter-spacing:1.5px;font-size:0.9rem;font-weight:700;color:var(--gold-d)}@media(max-width:600px){.tm-lead-q{font-size:1.3rem}}
 </style>
 <section class="band">
   <div class="wrap center">
@@ -523,7 +529,7 @@
 <script>
 (function(){
   try{fbq('track','ViewContent',{content_name:'The Estate Organiser'});}catch(e){}
-  document.querySelectorAll('a[href*="/offers/"]').forEach(function(a){
+  document.querySelectorAll('a[href*="checkout.theestateorganiser"]').forEach(function(a){
     a.addEventListener('click',function(){ try{fbq('track','InitiateCheckout',{content_name:'The Estate Organiser'});}catch(e){} });
   });
   var bar=document.getElementById('eo-sticky');
