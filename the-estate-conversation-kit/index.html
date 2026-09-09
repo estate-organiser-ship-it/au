@@ -272,6 +272,17 @@ footer .legal{margin-top:20px;font-size:.8rem;line-height:1.6;color:#8b887f;max-
 #price .box.hl h4{font-size:1.3rem;}
 .hero figure img{max-height:520px;width:auto;margin:0 auto;}
 @media(max-width:900px){.hero figure img{max-height:none;width:100%;}}
+
+@media(max-width:900px){
+  /* 10 Sep 2026, mobile overflow fix. Two problems pushed these pages wider than a
+     phone screen: the reassurance strip sat in two max-content columns, which floored
+     the hero grid track at 471px, and the header row could not wrap, so its logo plus
+     button set a 513px floor on the whole document. */
+  .reassure.grid2{grid-template-columns:1fr;}
+  .hero-grid{grid-template-columns:minmax(0,1fr);}
+  .hbar .wrap{flex-wrap:wrap;gap:10px 14px;}
+  .hbar .logo{min-width:0;}
+}
 </style>
 
 <header class="hbar">
