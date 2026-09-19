@@ -138,6 +138,16 @@ h2.sec{font-size:2.15rem;margin-bottom:6px;}
 /* reviews */
 .rating{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:34px;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 26px;}
 .rating .big{font-family:var(--serif);font-size:2.6rem;color:var(--navy);line-height:1;}
+.vband{display:flex;align-items:flex-start;gap:22px;flex-wrap:wrap;margin-top:32px;background:var(--white);border:1px solid var(--gold);border-radius:12px;padding:24px 26px;box-shadow:0 0 0 2px rgba(200,162,75,.16);}
+.vband .vscore{flex:0 0 auto;text-align:center;}
+.vband .vnum{font-family:var(--serif);font-size:2.4rem;color:var(--navy);line-height:1;}
+.vband .vstars{color:var(--gold);letter-spacing:2px;font-size:1rem;}
+.vband .vbody{flex:1 1 300px;}
+.vband .vtag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--gold-d);border:1px solid var(--gold);border-radius:6px;padding:3px 9px;margin-bottom:10px;}
+.vband p{font-size:.97rem;color:var(--muted);margin:0 0 10px;}
+.vband .who{font-size:.87rem;color:var(--sage);}
+.vband .who b{color:var(--navy);}
+.vband a{color:var(--gold-d);}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px;}
 .rev{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;}
 .rev h4{font-size:1.06rem;margin-bottom:9px;}
@@ -151,6 +161,10 @@ h2.sec{font-size:2.15rem;margin-bottom:6px;}
 .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px;align-items:stretch;}
 .tier{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:34px 28px;text-align:center;display:flex;flex-direction:column;position:relative;}
 .tier.featured{border:2px solid var(--gold);box-shadow:0 16px 40px rgba(27,33,80,.14);}
+/* $149 card in the middle, lifted; first on phones */
+@media(min-width:901px){.tiers .tier:nth-child(2){order:3;}.tiers .tier.featured{order:2;transform:scale(1.035);z-index:1;}}
+@media(max-width:900px){.tiers .tier.featured{order:-1;}}
+
 .tier-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-weight:800;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;white-space:nowrap;}
 .tier h3{font-size:1.3rem;margin-bottom:6px;}
 .tier .t-price{font-family:var(--serif);color:var(--navy);font-size:2.1rem;margin:10px 0 4px;}
@@ -542,6 +556,15 @@ footer .legal{margin-top:20px;font-size:.8rem;line-height:1.6;color:#8b887f;max-
   <div class="wrap">
     <p class="eyebrow">From our readers</p>
     <h2 class="sec">What families are telling us.</h2>
+    <div class="vband">
+      <div class="vscore"><div class="vnum">5.0</div><div class="vstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div>
+      <div class="vbody">
+        <span class="vtag">Verified review on ProductReview</span>
+        <p>"This organiser is brilliant. There's details and ideas that I never would have thought of. It inspires you to look into your life in a different way so that your estate is well planned, easily understood, and not left for someone to work out all the unknown answers to estate related questions"</p>
+        <p class="who"><b>Wendy S.</b>, VIC. <a href="https://www.productreview.com.au/listings/the-estate-organiser" target="_blank" rel="noopener">Read it on ProductReview</a></p>
+      </div>
+    </div>
+
 
     <div class="reviews">
       <div class="rev">
