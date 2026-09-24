@@ -150,7 +150,8 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theestateorganiser.com.au/"}, {"@type": "ListItem", "position": 2, "name": "The Free Executor Toolkit", "item": "https://www.theestateorganiser.com.au/toolkit/"}]}</script>
 <style id="toolkit-tidy-2026-09-24">
-.hero .hero-grid{grid-template-columns:1fr;max-width:720px;margin-left:auto;margin-right:auto}
+.hero.signed .cover-shot{display:none}
+.hero.signed .hero-grid{grid-template-columns:1fr;max-width:720px;margin-left:auto;margin-right:auto}
 .kit-offer .kit-book{display:block;width:100%;max-width:380px;height:auto;margin:4px auto 18px;border-radius:10px}
 .kit-offer .kit-list{text-align:left;max-width:470px;margin:0 auto 22px}
 .kit-offer a.kit-go{display:block;width:100%;max-width:430px;box-sizing:border-box;margin:6px auto 0;background:#1B2150 !important;color:#fff !important;border:2px solid #1B2150 !important;text-align:center;padding:17px 14px;font-size:1.06rem;box-shadow:0 8px 20px rgba(27,33,80,.22) !important}
@@ -202,6 +203,11 @@
           <span><span class="dot"></span>Private, yours to keep</span>
         </div>
       </div>
+      <div class="cover-shot">
+        <span class="flag">🇦🇺 Australian Edition</span>
+        <img src="/assets/toolkit-cover.png" alt="The Free Executor Toolkit, Australian Edition, cover">
+      </div>
+
     </div>
   </section>
 
@@ -379,5 +385,10 @@ document.addEventListener('click',function(e){var t=e.target&&e.target.closest?e
 
 <script>/* 12 Sep 2026 - carries the remembered traffic source across to the checkout link, so cold buyers get a lead_source too. Nothing visible. */
 (function(){try{document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="checkout.theestateorganiser."]'):null;if(!a)return;var s='';try{s=sessionStorage.getItem('eo_src')||''}catch(x){}if(!s)s='site '+location.pathname;var u=new URL(a.href);if(!u.searchParams.get('eo_src')){u.searchParams.set('eo_src',s.slice(0,200));a.href=u.toString()}},true)}catch(e){}})();</script>
+<script>
+(function(){var d=document.getElementById('done'),h=document.querySelector('.hero');if(!d||!h)return;
+function chk(){if(getComputedStyle(d).display!=='none')h.classList.add('signed');}
+new MutationObserver(chk).observe(d,{attributes:true,attributeFilter:['style','class']});chk();})();
+</script>
 </body>
 </html>
