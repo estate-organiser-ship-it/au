@@ -339,6 +339,24 @@ footer .legal{margin-top:20px;font-size:.8rem;line-height:1.6;color:#8b887f;max-
   .btn.gc-btn{background:transparent;border:1.5px solid var(--gold);box-shadow:none;
               color:var(--navy);font-weight:700;padding:15px 30px;font-size:1rem}
 </style>
+<style id="buyfix-2026-09-24">
+.quickpick{display:none}
+@media(max-width:900px){
+  .quickpick{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:22px auto 0}
+  .quickpick .btn{width:100%;padding:16px 12px;font-size:1.05rem;text-align:center;box-sizing:border-box}
+  .quickpick .qp-note{font-size:.9rem;color:var(--sage);margin:4px 0 0;text-align:center}
+}
+.tiers.book .tier,.legacy .lg-card{cursor:pointer}
+</style>
+<script>
+document.addEventListener('click',function(e){
+  if(e.target.closest('a,button,input,label'))return;
+  var t=e.target.closest('.tiers .tier'), a=null;
+  if(t){a=t.querySelector('a.btn');}
+  else if(e.target.closest('.legacy .lg-card')){a=document.querySelector('.legacy a.lg-btn');}
+  if(a&&a.href){a.click();}
+});
+</script>
 </head>
 <body>
 <header class="hbar">
@@ -677,6 +695,12 @@ footer .legal{margin-top:20px;font-size:.8rem;line-height:1.6;color:#8b887f;max-
     <p class="eyebrow">Three formats, one book</p>
     <h2 class="sec">Choose how you want yours.</h2>
     <p class="sub">Same book, same sections. Pick the format that suits how you like to work.</p>
+    <div class="quickpick">
+      <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Printed + Digital, $149</a>
+      <a class="btn ghost" href="https://checkout.theestateorganiser.au/printed-book-only">Printed book, $139</a>
+      <a class="btn ghost" href="https://checkout.theestateorganiser.au/c5623d53">Digital, $79</a>
+      <p class="qp-note">Or read about each format below.</p>
+    </div>
 
     <div class="tiers book">
       <div class="tier">
