@@ -1,0 +1,11 @@
+{
+  "site": "au",
+  "timezone": "Australia/Melbourne",
+  "publish_hour": 9,
+  "indexnow_key": "4e6222e966486bb53df6339a45645c1b",
+  "entries": [
+    { "date": "2026-09-29", "slug": "probate-checklist-australia" },
+    { "date": "2026-10-06", "slug": "how-to-organise-important-documents-australia" },
+    { "date": "2026-10-13", "slug": "what-to-organise-before-a-parent-dies" }
+  ]
+}
