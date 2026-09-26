@@ -159,11 +159,11 @@ h2.sec{font-size:2.15rem;margin-bottom:6px;}
 .towns b{color:var(--navy);}
 
 /* tiers */
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px;align-items:stretch;}
+.tiers{display:grid;grid-template-columns:repeat(2,1fr);max-width:820px;margin-left:auto;margin-right:auto;gap:26px;margin-top:48px;align-items:stretch;}
 .tier{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:34px 28px;text-align:center;display:flex;flex-direction:column;position:relative;}
 .tier.featured{border:2px solid var(--gold);box-shadow:0 16px 40px rgba(27,33,80,.14);}
 /* $149 card in the middle, lifted; first on phones */
-@media(min-width:901px){.tiers .tier:nth-child(2){order:3;}.tiers .tier.featured{order:2;transform:scale(1.035);z-index:1;}}
+@media(min-width:901px){.tiers .tier:nth-child(2){order:3;}.tiers .tier.featured{order:2;z-index:1;}}
 @media(max-width:900px){.tiers .tier.featured{order:-1;}}
 
 .tier-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--navy);font-weight:800;font-size:.66rem;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border-radius:20px;white-space:nowrap;}
@@ -259,7 +259,7 @@ footer .legal{margin-top:20px;font-size:.8rem;line-height:1.6;color:#8b887f;max-
 .compare .good h3::before{content:"\2714";margin-right:8px;color:#2E7D4F;font-size:.9em;}
 .compare .good li{font-weight:600;color:var(--ink);font-size:1.02rem;}
 .tiers.book .tier .btn{width:100%;justify-self:stretch;text-align:center;box-sizing:border-box;display:block;}
-.tiers.book .tier .micro,.tiers.book .tier .t-sub{text-align:center;}
+.tiers.book .tier .micro,.tiers.book .tier .t-sub,.tiers.book .tier h3,.tiers.book .tier .t-price{text-align:center;}
 .cards .card{display:flex;flex-direction:column;}
 .cards .card .without{margin-top:auto;}
 .cards .card p:not(.without){flex:0 0 auto;}
@@ -692,12 +692,11 @@ document.addEventListener('click',function(e){
 
 <section id="choose" style="background:var(--warm);border-top:1px solid var(--line)">
   <div class="wrap center">
-    <p class="eyebrow">Three formats, one book</p>
+    <p class="eyebrow">Two formats, one book</p>
     <h2 class="sec">Choose how you want yours.</h2>
     <p class="sub">Same book, same sections. Pick the format that suits how you like to work.</p>
     <div class="quickpick">
       <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Printed + Digital, $149</a>
-      <a class="btn ghost" href="https://checkout.theestateorganiser.au/printed-book-only">Printed book, $139</a>
       <a class="btn ghost" href="https://checkout.theestateorganiser.au/c5623d53">Digital, $79</a>
       <p class="qp-note">Or read about each format below.</p>
     </div>
@@ -707,23 +706,12 @@ document.addEventListener('click',function(e){
         <img class="tileimg" src="/assets/card-digital.jpg" alt="Digital Edition">
         <h3>Digital Edition</h3>
         <p class="t-price">$79 AUD</p>
-        <p class="t-sub">Instant download</p>
+        <p class="t-sub">Fillable PDF, instant download</p>
         <p class="foryou">For you if you would rather type than write, and want to start in the next five minutes.</p>
-        <p class="desc">The complete fillable Organiser on your computer. Type straight into it, or print any section at home. Individual chapters included, so you print only what applies.</p>
+        <p class="desc">The complete fillable Organiser as a PDF on your computer. Type straight into it, or print any section at home. Individual chapters included, so you print only what applies.</p>
         <p class="bonus empty"></p>
         <a class="btn ghost" href="https://checkout.theestateorganiser.au/c5623d53">Get the Digital Edition</a>
         <p class="micro">Add a Partner Copy at checkout, A$29, sent to their email</p>
-      </div>
-      <div class="tier">
-        <img class="tileimg" src="/assets/card-printed.jpg" alt="Printed Edition">
-        <h3>Printed Edition</h3>
-        <p class="t-price">$139 AUD</p>
-        <p class="t-sub">Free shipping in Australia</p>
-        <p class="foryou">For you if a book in a drawer beats a file on a laptop, for you or for a parent.</p>
-        <p class="desc">The coil bound book, printed just for you and posted to your door. Fill it in with a pen at the kitchen table, no screens involved.</p>
-        <p class="bonus empty"></p>
-        <a class="btn ghost" href="https://checkout.theestateorganiser.au/printed-book-only">Get the Printed Edition</a>
-        <p class="micro">Add a second copy at checkout, A$99</p>
       </div>
       <div class="tier featured">
         <div class="tier-badge">Most people choose this</div><img class="tileimg" src="/assets/card-both.jpg" alt="Printed + Digital">
@@ -732,6 +720,7 @@ document.addEventListener('click',function(e){
         <p class="t-sub">Free shipping, digital copy instantly</p>
         <p class="foryou">For you if you want to start tonight and still end up with the book on the shelf.</p>
         <p class="desc">The printed book posted to you, plus the digital edition in your inbox tonight. Start straight away, write it up properly when the book arrives.</p>
+        <p class="bonus empty"></p>
         <a class="btn" href="https://checkout.theestateorganiser.au/printed-book-order">Get Printed + Digital</a>
         <p class="micro">Add a second copy at checkout, A$99</p>
       </div>
