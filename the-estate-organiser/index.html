@@ -373,13 +373,14 @@ document.addEventListener('click',function(e){
 .whichone .skip{margin-top:6px!important;font-size:14px;opacity:.8;font-style:italic}
 .whichone .end{border-top:1px solid var(--line,#e6dfcf);padding-top:16px;text-align:center;font-weight:600;margin:0}
 .whichone .buy{margin:0!important}
-.whichone .buy .btn{display:inline-block;padding:8px 16px;font-size:14px;line-height:1.3;white-space:nowrap}
+.whichone .buy .btn{display:inline-block;box-sizing:border-box;width:300px;text-align:center;padding:8px 16px;font-size:14px;line-height:1.3;white-space:nowrap}
+.whichone .more{margin-top:6px!important;font-size:14px}
 .whichone .end a{color:inherit;text-decoration:underline}
 .whichone .xt a{color:inherit;text-decoration:underline}
 @media(max-width:640px){
 .whichone .x{grid-template-columns:1fr;row-gap:12px}
 .whichone .buy{justify-self:start}
-.whichone .buy .btn{white-space:normal}
+.whichone .buy .btn{white-space:normal;width:auto}
 }
 </style>
 </head>
@@ -708,15 +709,17 @@ document.addEventListener('click',function(e){
       <p class="lead">The Estate Organiser on its own is complete. Everything your executor needs is in the book. The extras are optional, for specific situations.</p>
       <div class="x"><div class="xt"><h5>The Executor&rsquo;s Companion <span>$39</span></h5>
         <p>For the person who will administer your estate. A working file for the months after a death: decisions diary, contact and money logs, letter templates.</p>
-        <p class="skip">Skip it if you&rsquo;re filling in your own affairs.</p></div>
+        <p class="skip">Skip it if you&rsquo;re filling in your own affairs.</p>
+        <p class="more"><a href="/executors-companion/">Read more about it</a></p></div>
         <p class="buy"><a class="btn ghost" href="https://checkout.theestateorganiser.au/be17b8e9">Get the Executor&rsquo;s Companion, $39</a></p></div>
       <div class="x"><div class="xt"><h5>The Conversation Kit <span>$27</span></h5>
         <p>For families who find these talks hard to start. Seven guided conversations, like super nominations and funeral wishes, to have before you fill in the book.</p>
-        <p class="skip">Skip it if your family already talks openly.</p></div>
+        <p class="skip">Skip it if your family already talks openly.</p>
+        <p class="more"><a href="/the-estate-conversation-kit/">Read more about it</a></p></div>
         <p class="buy"><a class="btn ghost" href="https://checkout.theestateorganiser.au/93791c45">Get the Conversation Kit, $27</a></p></div>
       <div class="x"><div class="xt"><h5>The Guided Course <span>$197</span></h5>
         <p>33 short lessons that walk you through filling in the book, chapter by chapter.</p>
-        <p class="skip">Also included in the <a href="#legacy-edition">Legacy Edition</a>.</p></div>
+        <p class="more"><a href="/the-estate-organiser-au-course/">Read more about it</a></p></div>
         <p class="buy"><a class="btn ghost" href="https://checkout.theestateorganiser.au/a3bb9970">Get the Guided Course, $197</a></p></div>
       <p class="end">Not sure? <a href="#choose">Start with the book</a>. You can add the extras later.</p>
     </div>
