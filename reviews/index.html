@@ -21,7 +21,7 @@ a{color:#1B2150} ul,ol{padding-left:24px}
 .disc{font-size:13px;color:#666;margin-top:40px;border-top:1px solid #d9d0bd;padding-top:18px}
 footer{text-align:center;color:#666;font-size:13px;padding:24px}h1,h2,h3,h4{font-weight:400;letter-spacing:.2px}</style>
 <style>
-:root{--navy:#1B2150;--gold:#C8A24B;--sage:#7C8A6A;--line:#e4dccb;--white:#fff;--muted:#5b574f;}
+:root{--navy:#1B2150;--gold:#C8A24B;--accent:#C8A24B;--sage:#7C8A6A;--line:#e4dccb;--white:#fff;--muted:#5b574f;}
 main{max-width:1080px;}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px;}
 .rev{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;}
@@ -37,6 +37,26 @@ main{max-width:1080px;}
 .verified p:last-child{margin-bottom:0;}
 .elsewhere{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin-top:18px;}
 .elsewhere p:last-child{margin-bottom:0;}
+header{position:sticky;top:0;z-index:50;padding:12px 20px;}
+.hbar{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+header .hbar img{height:44px;}
+.btn.hbtn{padding:10px 20px;font-size:15px;white-space:nowrap;}
+.verified{position:relative;}
+.verified .plogo{position:absolute;top:22px;right:24px;width:110px;height:auto;}
+.verified .plogo.fb{width:30px;}
+.prscore{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;}
+.prscore .prlogo{width:130px;height:auto;}
+.prscore .bignum{font-size:30px;line-height:1;color:var(--navy);}
+.prscore .stars{color:#C8A24B;font-size:22px;letter-spacing:2px;}
+.prscore .of{color:var(--muted);font-size:15px;}
+.next{display:grid;gap:22px;margin-top:18px;}
+.nextcard{display:flex;gap:26px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px;text-decoration:none;color:inherit;box-shadow:0 2px 10px rgba(27,33,80,.05);}
+.nextcard:hover{border-color:#C8A24B;}
+.nextcard img{width:150px;height:auto;flex:0 0 150px;border-radius:6px;}
+.nextcard h3{margin:6px 0 8px;font-size:22px;}
+.nextcard p{color:var(--muted);margin:0 0 14px;}
+.ntag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#AF8A36;border:1px solid #C8A24B;border-radius:6px;padding:3px 9px;font-family:Avenir Next,Helvetica,Arial,sans-serif;}
+@media(max-width:600px){.nextcard{flex-direction:column;text-align:center;}.nextcard img{width:140px;flex-basis:auto;}.verified .plogo{top:18px;right:18px;width:90px;}.verified .plogo.fb{width:26px;}.verified .vtag{margin-top:2px;}}
 @media(max-width:900px){.reviews{grid-template-columns:1fr;}h1{font-size:28px;}}
 </style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2230204167748434');fbq('track','PageView');</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D26NXBV715"></script>
@@ -44,12 +64,12 @@ main{max-width:1080px;}
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theestateorganiser.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://www.theestateorganiser.com.au/reviews/"}]}</script>
 </head><body>
-<header><a href="/"><img src="/assets/logo-blog.png" alt="The Estate Organiser"></a></header>
+<header><div class="hbar"><a href="/"><img src="/assets/logo-blog.png" alt="The Estate Organiser"></a><a class="btn hbtn" href="/the-estate-organiser/">Get the book</a></div></header>
 <main><h1>What readers have told us</h1>
 <p class="lead">Eight readers have posted publicly, seven on ProductReview and one on Facebook. The rest of this page is what readers have written to us directly by email, with their permission. First name only, unless they offered more. Nothing has been edited beyond trimming for length.</p>
-<p style="margin:4px 0 30px"><a class="btn" href="/the-estate-organiser/">Get the book</a></p>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"This is one of the most comprehensive, thoughtful and meticulously-planned, easy-to-read documents that I have ever encountered regarding getting one's life sorted out before the end and not leaving it for others (family members, friends) in their state of grief to guess at all manner of things... It is one of the kindest things you can do for those you love."</p>
@@ -58,6 +78,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"I knew I needed to get my affairs in order, to spare my children the hell it would be to locate and sort everything out once I'm gone. I didn't realise quite how much important information would've been difficult to find, or worse, lost forever. I've recommended this to two other friends my age and we agree it's saved a lot of grief for the future!"</p>
@@ -66,6 +87,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"This organiser is brilliant. There's details and ideas that I never would have thought of. It inspires you to look into your life in a different way so that your estate is well planned, easily understood, and not left for someone to work out all the unknown answers to estate related questions"</p>
@@ -74,6 +96,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"This is a very comprehensive, detailed book that allows you to record all the important things that you should record for the person who will be tasked with looking after your estate. I could not think of anything else that it needed to include. I found it very useful."</p>
@@ -82,6 +105,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"It is a very detailed book. Large and was overwhelming at first but it is nice to mark what applied for me and then discarded the pages that weren't relevant for my estate... Thankfully I found this though Instagram and I liked it because it's for Australians."</p>
@@ -90,6 +114,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span class="score">5.0 out of 5</span> on ProductReview.com.au</p>
 <p>"This is a well-thought-out, very comprehensive document. I have been preparing an Estate Plan for my children for some time now, and &ldquo;The Estate Organiser&rdquo; is a most useful tool to make sure nothing is missed or overlooked"</p>
@@ -98,6 +123,7 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
+<img class="plogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21">
 <span class="vtag">Verified review</span>
 <p><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span> <span class="score">4.0 out of 5</span> on ProductReview.com.au</p>
 <p>"We have started working through the document. It is clearly very comprehensive covering all potential situations. Far more than our simpler background needs making it quite daunting. My concern has yet to be faced being how to save the data we input and then update over the next 20+ years (being optimistic)."</p>
@@ -106,7 +132,8 @@ main{max-width:1080px;}
 </div>
 
 <div class="verified">
-<span class="vtag">Public recommendation on Facebook</span>
+<svg class="plogo fb" viewBox="0 0 48 48" width="30" height="30" aria-label="Facebook" role="img"><circle cx="24" cy="24" r="24" fill="#1877F2"/><path d="M26.4 38V25.9h4.1l.6-4.7h-4.7v-3c0-1.4.4-2.3 2.4-2.3h2.5v-4.2c-.4-.1-1.9-.2-3.6-.2-3.6 0-6 2.2-6 6.2v3.5h-4.1v4.7h4.1V38h4.7z" fill="#fff"/></svg>
+<span class="vtag">Verified review on Facebook</span>
 <p>"This product has been so carefully curated and thoughtfully written. We know there are things we need to do to prepare for end of life, and the book by The Estate Organiser is simple to follow, comprehensive, and most importantly, provides a guide for loved ones during what can be a very difficult time. I will be recommending this to everyone I know, and completing a copy myself."</p>
 <p class="who"><b>Dulcie M.</b>, July 2026</p>
 <p><a href="https://www.facebook.com/theestateorganiser/reviews" target="_blank" rel="noopener">Read it on Facebook</a></p>
@@ -170,19 +197,23 @@ main{max-width:1080px;}
     <p>"I went to the library on Friday and printed it out, so that will teach me. I spent yesterday putting it all into a folder and marvelling at all the things I would never have thought of. I think you've done an extraordinary job creating The Estate Organiser. I don't have much of an estate nor children, but I could immediately see the potential for so many aspects, such as letters to nieces and nephews."</p>
     <p class="who"><b>Anni</b>, NSW, 77</p>
   </div>
+  <div class="rev">
+    <p>"A very comprehensive document. I particularly like the explanations as to why a particular action is important."</p>
+    <p class="who"><b>Joe</b>, Torquay VIC, 83</p>
+  </div>
 </div>
 
 <h2>Reviews on other sites</h2>
 <div class="elsewhere">
-<p><b>ProductReview.com.au:</b> 4.9 out of 5 from seven reviews. <a href="https://www.productreview.com.au/listings/the-estate-organiser" target="_blank" rel="noopener">See the listing</a>.</p>
+<div class="prscore"><img class="prlogo" src="/assets/productreview-logo.svg" alt="ProductReview.com.au" width="120" height="21"><span class="bignum">4.9</span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="of">out of 5 from 7 reviews</span><a href="https://www.productreview.com.au/listings/the-estate-organiser" target="_blank" rel="noopener">See the listing</a></div>
 <p>One reader has also left a recommendation on <a href="https://www.facebook.com/theestateorganiser/reviews" target="_blank" rel="noopener">our Facebook page</a>. You can find us on <a href="https://www.trustpilot.com/review/theestateorganiser.com.au" target="_blank" rel="noopener">Trustpilot</a> too.</p>
 </div>
 
 <h2>Where to go next</h2>
-<p>If you have not read any of it yet, start with the <a href="/toolkit/">free Executor Toolkit</a>. It is the first stage of the book, the first 48 hours, written out in full. No payment, no card.</p>
-<p>If you already know what you are after, here is <a href="/the-estate-organiser/">The Estate Organiser</a> itself.</p>
-
-<div class="ctaband"><div style="font-size:20px;font-weight:bold">Start with the free Executor Toolkit</div><a class="btn" href="/toolkit/">Get the free toolkit</a></div>
+<div class="next">
+  <a class="nextcard" href="/toolkit/"><img src="/assets/toolkit-cover.png" alt="The free Executor Toolkit" width="380" height="492" loading="lazy"><div><span class="ntag">Free</span><h3>Start with the free Executor Toolkit</h3><p>If you have not read any of it yet, start here. It is the first stage of the book, the first 48 hours, written out in full. No payment, no card.</p><span class="btn">Get the free toolkit</span></div></a>
+  <a class="nextcard" href="/the-estate-organiser/"><img src="/assets/printed-book-mockup.png" alt="The Estate Organiser printed book" width="380" height="662" loading="lazy"><div><span class="ntag">From $79</span><h3>The Estate Organiser</h3><p>If you already know what you are after, here is the book itself. The fillable digital edition, or the printed book posted to you with the digital included.</p><span class="btn">Get the book</span></div></a>
+</div>
 <p class="disc">Educational content only. This is general information, not legal, financial or tax advice. Estate laws vary across Australian states and territories.</p></main>
 <footer><p class="cmp" style="margin:0 0 10px;font-size:14px">Weighing it up against something else? Read our <a href="/the-aussie-estate-kit-vs-the-estate-organiser/">side by side with The Aussie Estate Kit</a>.</p>&copy; The Estate Organiser
 <p class="prefsrc" style="margin-top:10px;font-size:13px;opacity:.75">Like these guides? <a style="margin:0" href="https://www.google.com/preferences/source?q=theestateorganiser.com.au" target="_blank" rel="noopener">Ask Google to show you more of them</a>.</p></footer><script>/* lead source, 5 Sep 2026: remembers where a visit came from and sends it with the email a lead already typed. Nothing visible. */
