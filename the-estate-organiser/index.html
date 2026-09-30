@@ -152,6 +152,11 @@ h2.sec{font-size:2.15rem;margin-bottom:6px;}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:34px;}
 .rev{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px 24px;display:flex;flex-direction:column;}
 .rev h4{font-size:1.06rem;margin-bottom:9px;}
+.rev-feature{grid-column:1/-1;flex-direction:row;gap:26px;align-items:center}
+.rev-feature img{width:170px;max-width:36%;height:auto;border-radius:10px;flex:0 0 auto}
+.rev-feature .rev-body{display:flex;flex-direction:column}
+@media (max-width:640px){.rev-feature{gap:16px;align-items:flex-start}.rev-feature img{width:96px}}
+
 .rev p{font-size:.97rem;color:var(--muted);margin:0 0 16px;flex:1;}
 .rev .who{font-size:.87rem;color:var(--sage);border-top:1px solid var(--line);padding-top:12px;}
 .rev .who b{color:var(--navy);font-weight:700;}
@@ -823,6 +828,8 @@ document.addEventListener('click',function(e){
 
 
     <div class="reviews">
+<div class="rev rev-feature"><img src="/assets/readers/jane-redland-bay.jpg" alt="A reader's printed copy of The Estate Organiser on her desk" width="720" height="817"><div class="rev-body"><h4>She wanted a real book, not another download</h4><p>"I had been looking for a book for quite some time but all I could see was downloadable ones. When I saw your advertisement, I knew that was what we were searching for."</p><p class="who"><b>Jane</b>, Redland Bay QLD, with her printed copy</p></div></div>
+
       <div class="rev">
         <h4>She had built her own, then read this one</h4>
         <p>"I am definitely going to move over to yours."</p>
