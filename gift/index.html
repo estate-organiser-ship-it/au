@@ -72,6 +72,16 @@
   .cta-band h2{color:#fff;font-size:1.9rem;margin-bottom:12px}
   .cta-band p{color:#d2cdbe;max-width:560px;margin:0 auto 22px;font-size:1.06rem}
   @media(max-width:640px){.gift-hero h1{font-size:1.9rem}}
+  #how{scroll-margin-top:84px}
+  .doors{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;max-width:680px;margin:0 auto;text-align:left}
+  .door{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px;display:flex;flex-direction:column}
+  .door.main{border:2px solid var(--gold)}
+  .door .who{font-size:.86rem;font-weight:700;color:var(--gold-d);margin-bottom:6px}
+  .door h3{font-size:1.2rem;margin-bottom:6px}
+  .door p{color:#4a463e;font-size:.96rem;margin-bottom:16px;flex:1}
+  .door .btn{align-self:flex-start}
+  .door-link{font-size:.9rem;color:var(--navy);margin-top:12px}
+  @media(max-width:640px){.doors{grid-template-columns:1fr}.door .btn{align-self:stretch}}
 </style>
 </head>
 <body>
@@ -86,7 +96,21 @@
     <div class="eyebrow">A Christmas present they will open twice</div>
     <h1>Give The Estate Organiser as a gift</h1>
     <p class="lead">A sealed envelope lands in their inbox at 9am on Christmas morning, or any day you choose. Inside it: your letter, your voice if you want, a photo, and their own Estate Organiser to fill in.</p>
-    <a class="btn gold" href="https://checkout.theestateorganiser.au/give-the-estate-organiser">Give The Estate Organiser, $79</a>
+    <div class="doors" role="group" aria-label="Who is it for?">
+      <div class="door main">
+        <div class="who">It's a gift for someone I love</div>
+        <h3>Give it as a sealed envelope</h3>
+        <p>Your letter and their own Estate Organiser, opened on Christmas morning.</p>
+        <a class="btn gold" href="https://checkout.theestateorganiser.au/give-the-estate-organiser">Give the gift, $79</a>
+        <a class="door-link" href="#how">See how it works first</a>
+      </div>
+      <div class="door">
+        <div class="who">It's for me</div>
+        <h3>Get the book for yourself</h3>
+        <p>Digital or printed, filled in at your own pace. Nothing stored online.</p>
+        <a class="btn" href="/the-estate-organiser/">See The Estate Organiser</a>
+      </div>
+    </div>
     <div class="video-wrap" style="margin-top:34px">
       <video controls playsinline preload="metadata" src="https://gift.theestateorganiser.com.au/gift/walkthrough.mp4"></video>
     </div>
@@ -94,7 +118,7 @@
   </div>
 </section>
 
-<section class="band">
+<section class="band" id="how">
   <div class="wrap">
     <div class="eyebrow">How it works</div>
     <h2 class="sec">Four steps, about five minutes</h2>
