@@ -19,6 +19,10 @@ copies it onto `main` on its date.
 - **2026-09-29** 09:00 Melbourne: `probate-checklist-australia`
 - **2026-10-06** 09:00 Melbourne: `how-to-organise-important-documents-australia`
 - **2026-10-13** 09:00 Melbourne: `what-to-organise-before-a-parent-dies`
+- **2026-11-26** 09:00 Melbourne: `inheritance-age-pension-centrelink`
+- **2026-12-10** 09:00 Melbourne: `date-of-death-tax-return-australia`
+- **2026-12-24** 09:00 Melbourne: `age-pension-assets-test-family-home`
+- **2027-01-07** 09:00 Melbourne: `funeral-bond-centrelink-limit`
 
 ## Changing the schedule
 
